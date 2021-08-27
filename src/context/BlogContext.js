@@ -9,7 +9,10 @@ const BlogReducer = ( state , action ) => {
 
     switch (action.type){
         case 'add_blogPost':
-            return [...state , { title: `Blog Post ${ state.length + 1}`}];    
+            return [...state , {
+                 id: Math.floor(Math.random() * 9999),
+                 title: `Blog Post ${ state.length + 1}`}
+                ];    
             default:
                 return state;
     }
@@ -20,8 +23,10 @@ const BlogReducer = ( state , action ) => {
 }
 
 
-    const addBlogPost = () => {
-        disptch({ type: 'add_blogPost' });
+    const addBlogPost = disptch => {
+        return () => {
+            disptch({ type: 'add_blogPost' });
+        }
     };
 
 
