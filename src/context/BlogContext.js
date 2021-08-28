@@ -62,5 +62,5 @@ const BlogReducer = ( state , action ) => {
 export const { Context , Provider } = createDataContext(
     BlogReducer ,
     { addBlogPost , delectBlogPost },
-    []
+    [ { title: 'TEST POST ' , content: 'TEST CONTENT' , id: 1}] // demo data for tesing 
 );
