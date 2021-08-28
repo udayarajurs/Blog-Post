@@ -12,7 +12,7 @@ const CreateScreens = ( { navigation }) => {
         })
     }}/>
 };
-
+ 
 const Styles = StyleSheet.create({});
 
 export default CreateScreens;
